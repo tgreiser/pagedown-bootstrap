@@ -1,8 +1,18 @@
-PageDown-Bootstrap
-==================
+# PageDown-Bootstrap
 
-This is a fork of http://code.google.com/p/pagedown/ changed to use Twitter Bootstrap for styling the editor and modal popups.
+A **jQuery** plugin that dynamically generates a **WYSIWYG** editor for **Markdown** with integrated **Twitter Bootstrap** styling.
 
-The demo is viewable here: http://samwillis.co.uk/pagedown-bootstrap/demo/browser/demo.html
+## Requirements
+* [jQuery 1.9+](http://jquery.com) (you know you should be keeping it up to date)
+* [Twitter Bootstrap 2.3+](http://twitter.github.com/bootstrap/)
 
-New icons based on http://glyphicons.com/, http://dribbble.com/shots/365544-Mini-glyphs-12-px-Free-PSD and the origional icons.
+## Releases
+
+```1.0``` - April 22, 2013
+
+* Initial release
+
+## Thanks
+* Editor and converter written by the [Pagedown](http://code.google.com/p/pagedown/) project.
+* [Sam Willis](https://github.com/samwillis/pagedown-bootstrap) for his original Bootstrap integration
+* New icons based on [GLYPHICONS](http://glyphicons.com), [Julian Leiss' mini glyphs](http://dribbble.com/shots/365544-Mini-glyphs-12-px-Free-PSD), and the origional icons of [http://code.google.com/p/pagedown/](Pagedown).
