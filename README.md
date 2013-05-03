@@ -12,6 +12,9 @@ A **jQuery** plugin that dynamically generates a **WYSIWYG** editor for **Markdo
 
 * Initial release
 
+## Demo & Documentation
+[http://kevin.oconnor.mp/pagedown-bootstrap](http://kevin.oconnor.mp/pagedown-bootstrap)
+
 ## Thanks
 * Editor and converter written by the [Pagedown](http://code.google.com/p/pagedown/) project.
 * [Sam Willis](https://github.com/samwillis/pagedown-bootstrap) for his original Bootstrap integration
