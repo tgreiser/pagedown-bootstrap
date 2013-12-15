@@ -10,9 +10,11 @@ A **jQuery** plugin that dynamically generates a **WYSIWYG** editor for **Markdo
 ## Releases
 
 ```1.0``` - April 22, 2013
-```1.1``` - December 14, 2013
+* Initial releasei
 
-* Initial release
+```1.1``` - December 14, 2013
+* Moved to support Bootstrap 3.x
+* Changed to FontAwesome as the icon provider
 
 ## Demo & Documentation
 [http://kevin.oconnor.mp/pagedown-bootstrap](http://kevin.oconnor.mp/pagedown-bootstrap)
