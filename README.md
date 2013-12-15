@@ -4,11 +4,13 @@ A **jQuery** plugin that dynamically generates a **WYSIWYG** editor for **Markdo
 
 ## Requirements
 * [jQuery 1.9+](http://jquery.com) (you know you should be keeping it up to date)
-* [Twitter Bootstrap 2.3+](http://twitter.github.com/bootstrap/)
+* [Twitter Bootstrap 3.0+](http://getbootstrap.com/)
+* [FontAwesome 4.0+](http://fontawesome.io/)
 
 ## Releases
 
 ```1.0``` - April 22, 2013
+```1.1``` - December 14, 2013
 
 * Initial release
 
