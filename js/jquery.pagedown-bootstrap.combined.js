@@ -21,7 +21,7 @@ else
 // edge cases.  So web applications can do client-side preview
 // in Javascript, and then build identical HTML on the server.
 //
-// This port needs the new RegExp functionality of ECMA 262,
+// This port needs the new RegExp functionality of ECMA 2621
 // 3rd Edition (i.e. Javascript 1.5).  Most modern web browsers
 // should do fine.  Even with the new regular expression features,
 // We do a lot of work to emulate Perl's regex functionality.
@@ -1372,8 +1372,8 @@ else
 
 	// The text that appears on the upper part of the dialog box when
 	// entering links.
-	var linkDialogText = "<p>http://example.com/ \"optional title\"</p>";
-	var imageDialogText = "<p>http://example.com/images/diagram.jpg \"optional title\"</p>";
+	var linkDialogText = "<code>http://example.com/ \"optional title\"</code>";
+	var imageDialogText = "<code>http://example.com/images/diagram.jpg \"optional title\"</code>";
 
 	// The default text that appears in the dialog input box when entering
 	// links.
@@ -2444,7 +2444,7 @@ else
 
 			// The cancel button
 			var cancelButton = doc.createElement("button");
-			cancelButton.className = "btn btn-primary";
+			cancelButton.className = "btn btn-danger";
 			cancelButton.type = "button";
 			cancelButton.onclick = function () { return close(true); };
 			cancelButton.innerHTML = "Cancel";
@@ -2688,7 +2688,7 @@ else
 
 			var makeButton = function (id, title, icon, textOp, group) {
 				var button = document.createElement("button");
-				button.className = "btn";
+				button.className = "btn btn-default";
 				var buttonImage = document.createElement("i");
 				buttonImage.className = icon;
 				button.id = id + postfix;
