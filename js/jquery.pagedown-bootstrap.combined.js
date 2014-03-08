@@ -21,7 +21,7 @@ else
 // edge cases.  So web applications can do client-side preview
 // in Javascript, and then build identical HTML on the server.
 //
-// This port needs the new RegExp functionality of ECMA 2621
+// This port needs the new RegExp functionality of ECMA 262,
 // 3rd Edition (i.e. Javascript 1.5).  Most modern web browsers
 // should do fine.  Even with the new regular expression features,
 // We do a lot of work to emulate Perl's regex functionality.
