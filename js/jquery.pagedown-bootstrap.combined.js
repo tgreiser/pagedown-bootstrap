@@ -3606,7 +3606,7 @@ else
 
 		// Default settings
 		var settings = $.extend( {
-			'sanatize'				: true,
+			'sanitize'				: true,
 			'help'						: null,
 			'hooks'						: Array()
 		}, options);
@@ -3615,7 +3615,7 @@ else
 
 			//Setup converter   
 			var converter = null;
-			if(settings.sanatize)
+			if(settings.sanitize)
 			{
 				converter = Markdown.getSanitizingConverter();
 			} else {
