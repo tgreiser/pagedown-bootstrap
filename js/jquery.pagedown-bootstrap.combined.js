@@ -1342,7 +1342,7 @@ else
 	}; // end of the Markdown.Converter constructor
 
 })();
-﻿// needs Markdown.Converter.js at the moment
+// needs Markdown.Converter.js at the moment
 
 (function () {
 
