@@ -1342,8 +1342,7 @@ else
 	}; // end of the Markdown.Converter constructor
 
 })();
-
-// needs Markdown.Converter.js at the moment
+﻿// needs Markdown.Converter.js at the moment
 
 (function () {
 
@@ -1372,13 +1371,13 @@ else
 
 	// The text that appears on the upper part of the dialog box when
 	// entering links.
-	var linkDialogText = "<code>http://example.com/ \"optional title\"</code>";
+	var linkDialogText = "<code>privacy.html \"Privacy Policy\"<br/>or<br/>http://example.com/ \"optional title\"</code>";
 	var imageDialogText = "<code>http://example.com/images/diagram.jpg \"optional title\"</code>";
 
 	// The default text that appears in the dialog input box when entering
 	// links.
 	var imageDefaultText = "http://";
-	var linkDefaultText = "http://";
+	var linkDefaultText = "";
 
 	var defaultHelpHoverTitle = "Markdown Editing Help";
 
@@ -2352,8 +2351,6 @@ else
 			else {
 				// Fixes common pasting errors.
 				text = text.replace(/^http:\/\/(https?|ftp):\/\//, '$1://');
-				if (!/^(?:https?|ftp):\/\//.test(text))
-					text = 'http://' + text;
 			}
 
 			$(dialog).modal('hide');
@@ -3009,11 +3006,17 @@ else
 					// the first bracket could then not act as the "not a backslash" for the second.
 					chunk.selection = (" " + chunk.selection).replace(/([^\\](?:\\\\)*)(?=[[\]])/g, "$1\\").substr(1);
 
-					var linkDef = " [999]: " + properlyEncoded(link);
+          if (isImage) {
+  					var linkDef = " [999]: " + properlyEncoded(link);
 
-					var num = that.addLinkDef(chunk, linkDef);
-					chunk.startTag = isImage ? "![" : "[";
-					chunk.endTag = "][" + num + "]";
+  					var num = that.addLinkDef(chunk, linkDef);
+	  				chunk.startTag = isImage ? "![" : "[";
+		  			chunk.endTag = "][" + num + "]";
+          } else {
+            // chunk.before + "[" + chunk.selection + "](" + properlyEncoded(link) + ")" + chunk.after
+            chunk.before += "["
+            chunk.after = "](" + properlyEncoded(link) + ")" + chunk.after
+          }
 
 					if (!chunk.selection) {
 						if (isImage) {
@@ -3463,7 +3466,6 @@ else
 
 
 })();
-
 (function () {
 	var output, Converter;
 	if (typeof exports === "object" && typeof require === "function") { // we're in a CommonJS (e.g. Node.js) module
@@ -3575,7 +3577,6 @@ else
 		return html;
 	}
 })();
-
 /*
  * Pagedown Bootstrap
  * Author: Kevin O'Connor
@@ -3669,4 +3670,3 @@ else
 
 	};
 })( jQuery );
-
