@@ -3610,9 +3610,10 @@ else
 			'sanitize'				: true,
 			'help'						: null,
 			'hooks'						: Array()
-		}, options);
+    }, options);
+    var editors = [];
 
-		return this.each(function() {   
+		this.each(function() {
 
 			//Setup converter   
 			var converter = null;
@@ -3665,8 +3666,9 @@ else
 			//Setup editor
 			var editor = new Markdown.Editor(converter, "-"+idAppend.toString(), help);
       editor.run();
+      editors[editors.length] = editor;
+    });
 
-		});
-
+    return editors;
 	};
 })( jQuery );
